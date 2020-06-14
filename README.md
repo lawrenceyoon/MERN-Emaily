@@ -11,10 +11,10 @@ Whole point of this specific app is to let users create surveys by paying money 
 8) User can see report of all survey responses
 
 ### `App Startup`
-dev startup: npm start
+dev startup: node index.js, after specifying start: npm start
 
 ### `Deployment`
-URL: 
+URL: https://still-tor-27300.herokuapp.com/
 
 Deployment Checklist for Heroku:
 1) Dynamic Port Binding (Heroku tells us a specific port to listen for) process.env.PORT
@@ -33,14 +33,22 @@ after "main", before "scripts" ->
 4) Create .gitignore file (don't commit dependencies or files we don't want to deploy):
 node_modules
 
+FIRST TIME DEPLOYMENT:
+1) under root dir (server), git init
+2) git add ., git commit -m "first commit"
+3) install Heroku CLI and create app: make sure heroku cli is installed -> heroku -v, heroku login
+4) heroku create (gives two links: one for deployed site, one for connecting with git)
+5) git remote add heroku secondLink
+6) git push heroku master
+7) heroku open -> checks to see if link works
+
+SUBSEQUENT DEPLOYS:
+1) in root dir (server), git status, git add ., git commit -m "your msg", git push heroku master
+
 ### `Detailed steps`
 GETTING STARTED
 - mkdir server, cd server, npm init
 - install express -> npm install --save express
 - Do Deployment Checklist above to deploy through Heroku
-
-For FIRST TIME DEPLOYMENT:
-1) under root dir (server), git init
-2) git add ., git commit -m "first commit"
 
 
