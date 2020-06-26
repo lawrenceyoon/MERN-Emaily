@@ -13,7 +13,15 @@ Whole point of this specific app is to let users create surveys by paying money 
 
 ### `App Startup`
 
-dev startup: node index.js, after specifying start: npm start
+Prod: through Heroku:\
+URL: https://still-tor-27300.herokuapp.com/
+
+Dev:\
+1) clone repo
+2) npm install
+3) at terminal in /server dir, npm run dev
+4) check at localhost:3000
+
 
 ### `Dependencies`
 
@@ -37,9 +45,6 @@ SERVER:
 8) Body-Parser: npm install --save body-parser
 
 ### `Deployment`
-
-Through Heroku:\
-URL: https://still-tor-27300.herokuapp.com/
 
 Deployment Checklist for Heroku:
 
