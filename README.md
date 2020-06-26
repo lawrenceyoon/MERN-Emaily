@@ -18,26 +18,27 @@ dev startup: node index.js, after specifying start: npm start
 ### `Dependencies`
 
 CLIENT:
-Http-Proxy-Middleware: npm install --save http-proxy-middleware
-Redux & React-Redux: npm install --save redux react-redux
-React-Router-Dom: npm install --save react-router-dom
-Sass: npm install --save node-sass
-Axios: npm install --save axios
-Redux-Thunk: npm install --save redux-thunk
-React Stripe Checkout: npm install --save react-stripe-checkout
+1) Http-Proxy-Middleware: npm install --save http-proxy-middleware
+2) Redux & React-Redux: npm install --save redux react-redux
+3) React-Router-Dom: npm install --save react-router-dom
+4) Sass: npm install --save node-sass
+5) Axios: npm install --save axios
+6) Redux-Thunk: npm install --save redux-thunk
+7) React Stripe Checkout: npm install --save react-stripe-checkout
 
 SERVER:
-Express: npm install --save express
-Passport & Passport Google Strategy: npm install --save passport passport-google-oauth20
-Nodemon: npm install --save nodemon
-Mongoose: npm install --save mongoose
-Cookie-session: npm install --save cookie-session
-Concurrently: npm install --save concurrently
-Stripe: npm install --save stripe
-Body-Parser: npm install --save body-parser
+1) Express: npm install --save express
+2) Passport & Passport Google Strategy: npm install --save passport passport-google-oauth20
+3) Nodemon: npm install --save nodemon
+4) Mongoose: npm install --save mongoose
+5) Cookie-session: npm install --save cookie-session
+6) Concurrently: npm install --save concurrently
+7) Stripe: npm install --save stripe
+8) Body-Parser: npm install --save body-parser
 
 ### `Deployment`
 
+Through Heroku:\
 URL: https://still-tor-27300.herokuapp.com/
 
 Deployment Checklist for Heroku:
@@ -47,8 +48,8 @@ Deployment Checklist for Heroku:
    node -v && npm -v
    after "main", before "scripts" ->
    "engines": {
-   "node": "12.14.0,
-   "npm": "6.14.3"
+   "node": "12.18.1",
+   "npm": "6.14.5"
    },
 3. Specify start script:
    "scripts": {
@@ -72,24 +73,3 @@ SUBSEQUENT DEPLOYS:
 
 1. in root dir (server), git status, git add ., git commit -m "your msg", git push heroku master
 2. heroku logs -> see any errors, heroku open -> opens app to see changes
-
-### `Detailed steps`
-
-GETTING STARTED
-
-- mkdir server, cd server, npm init
-- install express -> npm install --save express
-- Do Deployment Checklist above to deploy through Heroku
-
-1. USERS SIGNING IN VIA GOOGLE OAUTH (Reusable for future projects!)
-
-- passport.js is an authentication middleware for Node.js (two libraries we need to install)
-  1. passport: general helper for handling auth in express apps
-  2. passport strategy: helpers for authenticating one very specific method (our case -> Google OAuth)
-  - npm install --save passport passport-google-oauth20
-- To setup with Google apis, look at Section 3: 23 (Enabling Google OAuth API) from console.cloud.google
-- Store client id and client secret (sensitive data) in a separate file, use .gitignore to not deploy that file
-- Add nodemon dependency, so don't have to keep killing and restarting server; will automatically look for changes and update
-- refactored our code to separate directories, making our index.js cleaner
-- Used piece of identifying token (we are using cookies) to make follow up requests since HTTP is stateless. One good reason we are using cookies is because browser will handle it; not React or frontend
-- Setup MongoDB database, install mongoose library, make sure model class + instance shows up in collections in MongoDB
