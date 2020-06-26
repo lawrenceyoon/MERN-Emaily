@@ -1,5 +1,7 @@
 ### `App Guideline`
 
+Server & Client Side (Client stored inside server dir)
+
 Whole point of this specific app is to let users create surveys by paying money in order to do so.
 
 1. User will sign in via Google OAuth (Hardest part of app, but can use in future apps). Has client (user clicks login), server (get user details and stores info), and Google side (ask user to grant permission)
