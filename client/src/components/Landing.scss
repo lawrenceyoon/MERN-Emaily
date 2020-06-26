@@ -1,0 +1,15 @@
+@import 'Header';
+
+.Landing {
+  text-align: center;
+  padding: 20px 0;
+  color: $base-black;
+
+  h1 {
+    color: $pink;
+    text-shadow: 2px 2px 4px rgba(169, 150, 150, 0.75);
+    font-size: 5em;
+    margin-top: 150px;
+  }
+
+}

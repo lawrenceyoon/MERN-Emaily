@@ -17,11 +17,24 @@ dev startup: node index.js, after specifying start: npm start
 
 ### `Dependencies`
 
+CLIENT:
+Http-Proxy-Middleware: npm install --save http-proxy-middleware
+Redux & React-Redux: npm install --save redux react-redux
+React-Router-Dom: npm install --save react-router-dom
+Sass: npm install --save node-sass
+Axios: npm install --save axios
+Redux-Thunk: npm install --save redux-thunk
+React Stripe Checkout: npm install --save react-stripe-checkout
+
+SERVER:
 Express: npm install --save express
 Passport & Passport Google Strategy: npm install --save passport passport-google-oauth20
 Nodemon: npm install --save nodemon
 Mongoose: npm install --save mongoose
 Cookie-session: npm install --save cookie-session
+Concurrently: npm install --save concurrently
+Stripe: npm install --save stripe
+Body-Parser: npm install --save body-parser
 
 ### `Deployment`
 

@@ -1,13 +1,15 @@
 // dependencies
-const express = require("express");
-const mongoose = require("mongoose");
-const cookieSession = require("cookie-session");
-const passport = require("passport");
+const express = require('express');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const bodyParser = require('body-parser');
 // local files
-const keys = require("./config/keys");
-require("./models/User");
-require("./services/passport");
-const authRoutes = require("./routes/authRoutes");
+const keys = require('./config/keys');
+require('./models/User');
+require('./services/passport');
+const authRoutes = require('./routes/authRoutes');
+const billingRoutes = require('./routes/billingRoutes');
 
 // use mongoose to connect to MongoDB with our Express API
 mongoose.connect(keys.mongoURI);
@@ -15,7 +17,9 @@ mongoose.connect(keys.mongoURI);
 // create instance of express app
 const app = express();
 
-// tell passport to make use of cookies to handle auth
+// middlewares to operate on incoming request BEFORE sent to route handlers!
+app.use(bodyParser.json());
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -28,6 +32,18 @@ app.use(passport.session());
 
 // call in our routes
 authRoutes(app);
+billingRoutes(app);
+
+// Only run in production (Heroku)
+if (process.env.NODE_ENV === "production") {
+  // Express will serve up production assets like our main.js file or main.css file!
+  app.use(express.static("client/build"));
+  // Express will serve up the index.html file if it doesn't recognize the route! (kick user to client side)
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+};
 
 // PORT
 const PORT = process.env.PORT || 5000;
