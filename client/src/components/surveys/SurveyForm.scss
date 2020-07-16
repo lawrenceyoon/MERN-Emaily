@@ -1,0 +1,18 @@
+@import '../main';
+
+.SurveyForm {
+
+  .ui.primary.button {
+    margin: 0;
+  }
+
+  .ui.button:not(.icon)>.icon:not(.button):not(.dropdown) {
+    margin-left: 10px;
+  }
+
+  .validate-msg {
+    font-style: italic;
+    color: $base-red;
+  }
+
+}

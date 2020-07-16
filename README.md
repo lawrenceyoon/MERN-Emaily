@@ -35,6 +35,8 @@ CLIENT:
 5) Axios: npm install --save axios
 6) Redux-Thunk: npm install --save redux-thunk
 7) React Stripe Checkout: npm install --save react-stripe-checkout
+8) Redux Form: npm install --save redux-form
+9) Lodash: npm install --save lodash
 
 SERVER:
 1) Express: npm install --save express
@@ -45,6 +47,8 @@ SERVER:
 6) Concurrently: npm install --save concurrently
 7) Stripe: npm install --save stripe
 8) Body-Parser: npm install --save body-parser
+9) Sendgrid: npm install --save sendgrid
+10) Path-parser: npm install --save path-parser
 
 ### `Deployment`
 

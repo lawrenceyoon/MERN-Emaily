@@ -1,0 +1,19 @@
+@import 'main';
+
+.Dashboard {
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+
+  .ui.button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background-color: $base-blue;
+  }
+
+  .icon {
+    color: $base-white;
+  }
+}

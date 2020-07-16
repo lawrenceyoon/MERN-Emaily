@@ -1,0 +1,21 @@
+@import '../main';
+
+.surveyList {
+  text-align: center;
+  padding: 30px 0;
+
+  .ui.card {
+    width: 100%;
+  }
+
+  .choice-yes {
+    padding-right: 5px;
+    color: $base-orange;
+  }
+
+  .choice-no {
+    padding-left: 5px;
+    color: $base-orange;
+  }
+
+}

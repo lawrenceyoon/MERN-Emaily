@@ -2,7 +2,7 @@
 const passport = require('passport');
 // local files
 
-// Route handlers
+// Route handler
 module.exports = (app) => {
   // kicks user into oauth flow first time
   app.get(

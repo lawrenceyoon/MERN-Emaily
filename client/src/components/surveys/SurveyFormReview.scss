@@ -1,0 +1,15 @@
+@import '../main';
+
+.SurveyFormReview {
+
+  .form-input {
+    padding-top: 10px;
+    border-bottom: 1px solid $base-black;
+    margin-bottom: 30px;
+  }
+
+  .ui.button:not(.icon)>.icon:not(.button):not(.dropdown) {
+    margin: 0 0 0 5px;
+  }
+
+}

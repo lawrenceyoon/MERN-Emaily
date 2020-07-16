@@ -7,9 +7,11 @@ const bodyParser = require('body-parser');
 // local files
 const keys = require('./config/keys');
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 const authRoutes = require('./routes/authRoutes');
 const billingRoutes = require('./routes/billingRoutes');
+const surveyRoutes = require('./routes/surveyRoutes');
 
 // use mongoose to connect to MongoDB with our Express API
 mongoose.connect(keys.mongoURI);
@@ -33,6 +35,7 @@ app.use(passport.session());
 // call in our routes
 authRoutes(app);
 billingRoutes(app);
+surveyRoutes(app);
 
 // Only run in production (Heroku)
 if (process.env.NODE_ENV === "production") {
