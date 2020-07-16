@@ -86,6 +86,8 @@ SUBSEQUENT DEPLOYS:
 2. heroku logs -> see any errors, heroku open -> opens app to see changes
 
 ### `Using App`
+*PLEASE DON'T PAY MONEY!!! This app is solely for testing and learning purposes! To add credits, please use any email, for card write 4242 4242 4242 4242, expiration date can be anything past our date today, security code can be any 3 digit number! -Thanks
+
 This app was created while following Stephen Grider's Udemy tutorial while applying own personal touches here and there.
 <br><br>
 Login through Google OAuth, go through the flow, and once logged in, you can add credits to send 1 batch email to as many recipients as you want! If you aren't logged in, you aren't able to send an email with a error response in console. Click the + button to get started with your email, review it by clicking next, and send survey! View the survey wherever you have sent it (in recipients list).
