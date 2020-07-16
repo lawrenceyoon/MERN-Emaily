@@ -14,7 +14,7 @@ class surveyList extends React.Component {
   renderSurveys() {
     return this.props.surveys.reverse().map((survey) => {
       return (
-        <div className="ui card">
+        <div className="ui card" key={survey._id}>
           <div className="content">
             <div className="center aligned header">{survey.title}</div>
             <div className="center aligned description">
