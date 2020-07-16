@@ -39,9 +39,9 @@ class surveyList extends React.Component {
   render() {
     return (
       <div className="surveyList">
-        New
+        <p>New</p>
         {this.renderSurveys()}
-        Old
+        <p>Old</p>
       </div>
     );
   };

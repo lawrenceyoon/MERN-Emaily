@@ -84,3 +84,8 @@ SUBSEQUENT DEPLOYS:
 
 1. in root dir (server), git status, git add ., git commit -m "your msg", git push heroku master
 2. heroku logs -> see any errors, heroku open -> opens app to see changes
+
+### `Using App`
+This app was created while following Stephen Grider's Udemy tutorial while applying own personal touches here and there.
+<br><br>
+Login through Google OAuth, go through the flow, and once logged in, you can add credits to send 1 batch email to as many recipients as you want! If you aren't logged in, you aren't able to send an email with a error response in console. Click the + button to get started with your email, review it by clicking next, and send survey! View the survey wherever you have sent it (in recipients list). In dev, able to use webhooks and can track the clicks; in prod, can only send out emails and view sent in dashboard.
